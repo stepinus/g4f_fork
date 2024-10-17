@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 2,
+  "dockerfileLines": [
+    "FROM selenium/node-chrome",
+    "WORKDIR /app",
+    "COPY . /app",
+    "RUN docker-compose build",
+    "EXPOSE 8080 1337 7900",
+    "CMD [\"docker-compose\", \"up\"]"
+  ]
+}
